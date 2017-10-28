@@ -29,25 +29,25 @@ $(document).ready(function() {
         if (lock || !accept) {
             return;
         }
-		var velement = document.getElementById("pass");
+        var velement = document.getElementById("pass");
         var pswdValue = velement.value;
         if (pswdValue == "") {
             loginDenied("Salasana ei voi olla tyhjä!", false);
-	    } else if (csuserindex == 4) {
-			var pswhash = md5(pswdValue);
-			if (pswhash == passwords[csuserindex]) {
+        } else if (csuserindex == 4) {
+            var pswhash = md5(pswdValue);
+            if (pswhash == passwords[csuserindex]) {
                 loginSuccess();
-			} else {
+            } else {
                 loginDenied("Väärä Salasana!", true); 
-			}
+            }
         } else if (pswdValue == passwords[csuserindex]) {
             loginSuccess();
         } else {
-			loginDenied("Väärä Salasana!", true); 
-		}
-		velement.value = "";
+            loginDenied("Väärä Salasana!", true); 
+        }
+        velement.value = "";
     });
-	nextUser();
+    nextUser();
 });
 
 function loginDenied(msg, usetry) {
@@ -103,36 +103,36 @@ function loginSuccess() {
 }
 
 function startTimer() {
-	var tlelement = document.getElementById("time-left");
-	var date = new Date();
+    var tlelement = document.getElementById("time-left");
+    var date = new Date();
     tlelement.timeStart = date.getTime() + answerTime;
-	var msg = "Aikaa jäljellä: ";
+    var msg = "Aikaa jäljellä: ";
     tlelement.intervalVar = setInterval(function() {
-		var ndate = new Date();
+        var ndate = new Date();
         var curTime = tlelement.timeStart - ndate.getTime();
-		if (!running) {
-			clearInterval(tlelement.intervalVar);
-		} else if (curTime < 0) {
-			tlelement.innerHTML = "<font color='red'>Aika loppui</font>";        
-			clearInterval(tlelement.intervalVar);
+        if (!running) {
+            clearInterval(tlelement.intervalVar);
+        } else if (curTime < 0) {
+            tlelement.innerHTML = "<font color='red'>Aika loppui</font>";        
+            clearInterval(tlelement.intervalVar);
             tries = 0;
             lock = false; // unlocked for the timer otherwise this might get buggy
             loginDenied("Aika loppui!", true);
         } else {
-			tlelement.innerHTML = msg + "<font color='red'>" + formatMilliSeconds(curTime) + "s</font>";
-		}
+            tlelement.innerHTML = msg + "<font color='red'>" + formatMilliSeconds(curTime) + "s</font>";
+        }
         totalTime += 20;
     }, 20);
 }
 
 function nextUser() {
-	tries = 3;
-	var user = "Kirjaudu käyttäjänä: <b>" + users[csuserindex] + "</b> / " + users.length;
+    tries = 3;
+    var user = "Kirjaudu käyttäjänä: <b>" + users[csuserindex] + "</b> / " + users.length;
     var uelement = document.getElementById("content-text");
     uelement.innerHTML = user;
-	startTimer();
+    startTimer();
     setTries(tries);
-	running = true;
+    running = true;
 }
 
 function setTries(tries) {
@@ -179,7 +179,7 @@ function getNextUser() {
 }
 
 function formatMilliSeconds(milli) {
-	var milliseconds = milli % 1000;
+    var milliseconds = milli % 1000;
     var seconds = Math.floor((milli / 1000) % 60);
     var minutes = Math.floor((milli / (60 * 1000)) % 60);
     if (minutes < 1) {
