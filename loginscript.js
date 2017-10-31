@@ -62,7 +62,6 @@ function loginDenied(msg, usetry) {
             running = false;
             answers[csuserindex] = false;
             setTries("<font color='red'>0</font>");
-            answers[csuserindex] = false;
             var nextUser = getNextUser();
             if (nextUser == null) {
                 $('.alert-denied').fadeIn(500).html("Yritykset loppuivat!");
