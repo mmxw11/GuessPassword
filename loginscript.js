@@ -162,7 +162,7 @@ function processEnd() {
     telement.innerHTML = "Yrityksiä yhteensä: <b>" + totalTries + "/15</b>"; 
     //total time
     var tlelement = document.getElementById("time-left");
-    tlelement.innerHTML = "Kokonais aika: <font color='red'>" + formatMilliSeconds(totalTime) + "s</font>"; //TODO: FIX
+    tlelement.innerHTML = "Kokonaisaika: <font color='red'>" + formatMilliSeconds(totalTime) + "s</font>";
     //home button
     var hbuttonelement = document.getElementById("options");
     hbuttonelement.style.display = 'block';
