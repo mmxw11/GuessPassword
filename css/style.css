@@ -5,11 +5,11 @@
 }
 
 html { 
-  background: url(../background.png) no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+    background: url(../background.png) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 a {
@@ -60,8 +60,7 @@ a {
     background-color: #D55246;
     text-align: center;
     cursor: pointer;
-    white-space: nowrap
-    -webkit-touch-callout: none;
+    white-space: nowrap;
     -webkit-user-select: none;
     -khtml-user-select: none;
     -moz-user-select: none;
