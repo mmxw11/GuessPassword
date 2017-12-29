@@ -1,35 +1,35 @@
 <!DOCTYPE html>
 <html>
- <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>Arvaa salasana</title>
-  <link rel="stylesheet" type="text/css" href="css/style.css">
-  <link rel="stylesheet" type="text/css" href="css/loginstyle.css">
-  <script type="text/javascript" src='lib/jquery-min-3.2.1.js'></script>
-  <script type="text/javascript" src='lib/md5-min.js'></script>
-  <script type="text/javascript" src="loginscript.js"></script>
- </head>
- <body>
-  <div class="info-div">
-   <div class="content-div">
-    <p id="title"><b>Kirjaudu Sisään:</b></p>
-     <p id="content-text"></p>
-      <div id="login-section">
-       <span class="alert-denied"></span>
-       <span class="alert-success"></span>
-        <div class="form-group log-status">
-         <input type="password" class="form-control" placeholder="Salasana" id="pass"/>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Arvaa salasana</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/loginstyle.css">
+    <script type="text/javascript" src='lib/jquery-min-3.2.1.js'></script>
+    <script type="text/javascript" src='lib/md5-min.js'></script>
+    <script type="text/javascript" src="loginscript.js"></script>
+  </head>
+  <body>
+    <div class="info-div">
+      <div class="content-div">
+        <p id="title"><b>Kirjaudu Sisään:</b></p>
+        <p id="content-text"></p>
+        <div id="login-section">
+          <span class="alert-denied"></span>
+          <span class="alert-success"></span>
+          <div class="form-group log-status">
+            <input type="password" class="form-control" placeholder="Salasana" id="pass"/>
+          </div>
+          <input type="button" class="nobg-button" value="Unohtuiko salasana?" onClick="loginDenied('Ei tää niin helppoa ole :)', true);"/>
+          <button type="button" class="g-button" id="login-button">Kirjaudu sisään</button>
         </div>
-       <input type="button" class="nobg-button" value="Unohtuiko salasana?" onClick="loginDenied('Ei tää niin helppoa ole :)', true);"/>
-       <button type="button" class="g-button" id="login-button">Kirjaudu sisään</button>
+        <p id="tries-left"></p>
+        <p id ="time-left"></p>
+        <div class="options-div" id="options" style="display: none;"> 
+          <input type="button" class="g-button" value="Reset" onClick="location.href = 'index.html';"/>
+        </div>
       </div>
-     <p id="tries-left"></p>
-    <p id ="time-left"></p> 
-    <div class="options-div" id="options" style="display: none;"> 
-     <input type="button" class="g-button" value="Reset" onClick="location.href = 'index.html';"/>
     </div>
-   </div>
-  </div>
- </body>
+  </body>
 </html>
