@@ -13,8 +13,8 @@ var passwords = [
     "test4", 
     "e3d704f3542b44a621ebed70dc0efe13"
 ]
+// variables
 var answers = [];
-//other variables
 var answerTime = 30 * 1000;
 var lock = false;
 var running = false;
