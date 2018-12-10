@@ -1,100 +1,100 @@
 /* universal */
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
-html { 
-    background: url(../background.png) no-repeat center center fixed; 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
+html {
+  background: url(../background.png) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
 }
 
 a {
-    color: white;
+  color: white;
 }
 
 /* classes */
 .info-div {
-    max-width: 806px;
-    padding: 57px;
-    margin: 0 auto;
+  max-width: 806px;
+  padding: 57px;
+  margin: 0 auto;
 }
 
 .content-div {
-    margin-top: 130px;
-    font-family: Verdana, Geneva, sans-serif;
-    color: white;
-    font-style: normal;
-    font-variant: normal;
+  margin-top: 130px;
+  font-family: Verdana, Geneva, sans-serif;
+  color: white;
+  font-style: normal;
+  font-variant: normal;
 }
 
 .options-div {
-    padding-top: 50px;
+  padding-top: 50px;
 }
 
 .nobg-button {
-    background-color: transparent;
-    background-repeat: no-repeat;
-    border: none;
-    cursor: pointer;
-    overflow: hidden;
-    outline: none;
-    color: inherit;
-    float: right;
-    margin-bottom: 15px;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  outline: none;
+  color: inherit;
+  float: right;
+  margin-bottom: 15px;
 }
 
 .g-button {
-    border: none;
-    color: inherit;
-    display: inline-block;
-    outline: 0;
-    padding: 11px 60px;
-    vertical-align: middle;
-    overflow: hidden;
-    text-decoration: none;
-    background-color: #D55246;
-    text-align: center;
-    cursor: pointer;
-    white-space: nowrap;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+  border: none;
+  color: inherit;
+  display: inline-block;
+  outline: 0;
+  padding: 11px 60px;
+  vertical-align: middle;
+  overflow: hidden;
+  text-decoration: none;
+  background-color: #D55246;
+  text-align: center;
+  cursor: pointer;
+  white-space: nowrap;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .g-button:hover {
-    box-shadow: 0px 0px 5px #fff;
+  box-shadow: 0px 0px 5px #fff;
 }
 
 /* ids */
 #title {
-    font-size: 20px;
-    font-weight: 400;
-    line-height: 20px;
-    margin-bottom: 20px;
-    font-weight: bold;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 20px;
+  margin-bottom: 20px;
+  font-weight: bold;
 }
 
 #content-login {
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 25px;
-    margin-bottom: 35px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 25px;
+  margin-bottom: 35px;
 }
 
 #content-text {
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 25px;
-    margin-bottom: 35px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 25px;
+  margin-bottom: 35px;
 }
 
 #info-text {
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 25px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 25px;
 }

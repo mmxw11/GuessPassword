@@ -1,16 +1,16 @@
 //arrays
 var users = [
     "User 1",
-    "User 2",  
-    "User 3",  
-    "User 4",  
+    "User 2",
+    "User 3",
+    "User 4",
     "User 5"
 ]
 var passwords = [
     "test1",
-    "test2", 
-    "test3", 
-    "test4", 
+    "test2",
+    "test3",
+    "test4",
     "e3d704f3542b44a621ebed70dc0efe13"
 ]
 // variables
@@ -24,8 +24,8 @@ var totalTries = 0;
 var csuserindex = 0;
 var totalTime = 0;
 
-$(document).ready(function() {
-    $('#login-button').click(function() {
+$(document).ready(function () {
+    $('#login-button').click(function () {
         if (lock || !accept) {
             return;
         }
@@ -38,12 +38,12 @@ $(document).ready(function() {
             if (pswhash == passwords[csuserindex]) {
                 loginSuccess();
             } else {
-                loginDenied("Väärä Salasana!", true); 
+                loginDenied("Väärä Salasana!", true);
             }
         } else if (pswdValue == passwords[csuserindex]) {
             loginSuccess();
         } else {
-            loginDenied("Väärä Salasana!", true); 
+            loginDenied("Väärä Salasana!", true);
         }
         velement.value = "";
     });
@@ -73,14 +73,14 @@ function loginDenied(msg, usetry) {
             }
         } else {
             $('.alert-denied').fadeIn(500).html(msg);
-            setTries(tries); 
+            setTries(tries);
         }
     } else {
         $('.alert-denied').fadeIn(500).html(msg);
     }
-    setTimeout( "$('.alert-denied').fadeOut(1500);", 1500);
-    setTimeout( "lock = false;", 1500);
-    setTimeout( "$('.log-status').removeClass('wrong-entry');", 1500);
+    setTimeout("$('.alert-denied').fadeOut(1500);", 1500);
+    setTimeout("lock = false;", 1500);
+    setTimeout("$('.log-status').removeClass('wrong-entry');", 1500);
 }
 
 function loginSuccess() {
@@ -97,8 +97,8 @@ function loginSuccess() {
         $('.alert-success').fadeIn(500).html("Salasana oikein! Seuraava käyttäjä: " + nextUser);
         setTimeout(" nextUser();", 2000);
     }
-    setTimeout( "$('.alert-success').fadeOut(1500);", 1500);
-    setTimeout( "$('.log-status').removeClass('correct-entry');", 1500);
+    setTimeout("$('.alert-success').fadeOut(1500);", 1500);
+    setTimeout("$('.log-status').removeClass('correct-entry');", 1500);
 }
 
 function startTimer() {
@@ -106,13 +106,13 @@ function startTimer() {
     var date = new Date();
     tlelement.timeStart = date.getTime() + answerTime;
     var msg = "Aikaa jäljellä: ";
-    tlelement.intervalVar = setInterval(function() {
+    tlelement.intervalVar = setInterval(function () {
         var ndate = new Date();
         var curTime = tlelement.timeStart - ndate.getTime();
         if (!running) {
             clearInterval(tlelement.intervalVar);
         } else if (curTime < 0) {
-            tlelement.innerHTML = "<font color='red'>Aika loppui</font>";        
+            tlelement.innerHTML = "<font color='red'>Aika loppui</font>";
             clearInterval(tlelement.intervalVar);
             tries = 0;
             lock = false; // unlocked for the timer otherwise this might get buggy
@@ -137,7 +137,7 @@ function nextUser() {
 function setTries(tries) {
     var telement = document.getElementById("tries-left");
     var triesStr = "Yrityksiä jäljellä: " + tries + "/3";
-    telement.innerHTML = triesStr; 
+    telement.innerHTML = triesStr;
 }
 
 function processEnd() {
@@ -151,7 +151,7 @@ function processEnd() {
     //stats
     var header = "<font style='font-weight:bold' size='6px;'>Tulokset:</font><br/><br/>";
     var stats = "";
-    for (i = 0; i < users.length; i++) { 
+    for (i = 0; i < users.length; i++) {
         var response = answers[i];
         var val = response ? "<font color='#006400'>Oikein</font>" : "<font color='red'>Väärin</font>";
         stats += "<b>" + users[i] + ":</b> " + val + "<br/>";
@@ -159,21 +159,21 @@ function processEnd() {
     lelement.innerHTML = header + stats;
     //tries
     var telement = document.getElementById("tries-left");
-    telement.innerHTML = "Yrityksiä yhteensä: <b>" + totalTries + "/15</b>"; 
+    telement.innerHTML = "Yrityksiä yhteensä: <b>" + totalTries + "/15</b>";
     //total time
     var tlelement = document.getElementById("time-left");
     tlelement.innerHTML = "Kokonaisaika: <font color='red'>" + formatMilliSeconds(totalTime) + "s</font>";
     //home button
     var hbuttonelement = document.getElementById("options");
     hbuttonelement.style.display = 'block';
-    
+
 }
 
 function getNextUser() {
     csuserindex++;
     if (csuserindex >= users.length) {
         return null;
-    } 
+    }
     return users[csuserindex];
 }
 
