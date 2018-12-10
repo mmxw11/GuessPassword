@@ -3,6 +3,7 @@
     position: relative;
     margin-bottom: 10px;
 }
+
 .form-control {
     width: 100%;
     height: 20px;
@@ -45,39 +46,39 @@
 }
 
 @-moz-keyframes input-log {
-  0%, 100% {
-    left: 0px;
-  }
-  20% , 60% {
-    left: 15px;
-  }
-  40% , 80% {
-    left: -15px;
-  }
+    0%, 100% {
+      left: 0px;
+    }
+    20%, 60% {
+      left: 15px;
+    }
+    40%, 80% {
+      left: -15px;
+    }
 }
 
 @-webkit-keyframes input-log {
-  0%, 100% {
-    left: 0px;
-  }
-  20% , 60% {
-    left: 15px;
-  }
-  40% , 80% {
-    left: -15px;
-  }
+    0%, 100% {
+      left: 0px;
+    }
+    20%, 60% {
+      left: 15px;
+    }
+    40%, 80% {
+      left: -15px;
+    }
 }
 
 @keyframes input-log {
-  0%, 100% {
-    left: 0px;
-  }
-  20% , 60% {
-    left: 15px;
-  }
-  40% , 80% {
-    left: -15px;
-  }
+    0%, 100% {
+      left: 0px;
+    }
+    20%, 60% {
+      left: 15px;
+    }
+    40%, 80% {
+      left: -15px;
+    }
 }
 
 /* ids */
